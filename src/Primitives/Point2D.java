@@ -16,4 +16,18 @@ public class Point2D {//implements Comparable<Point2D> {
         x = new Coordinate(xIn);
         y = new Coordinate(yIn);
     }
+    public Point2D(Point2D point2D){                     //copy
+        x = point2D.getX();//doesn't need new here becouse in the get/set there is a new
+        y = point2D.getY();
+    }
+    // ***************** Getters/Setters ********************** //
+
+    //properties
+    public Coordinate getX() { return new Coordinate(x); }
+    public Coordinate getY() { return new Coordinate(y); }
+
+    public void setX(Coordinate _x) { x = new Coordinate(x);	}
+    public void setY(Coordinate _y) { y = new Coordinate(y);	}
+
+    // ***************** Administration  ******************** //
 }
