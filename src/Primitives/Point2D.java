@@ -1,6 +1,6 @@
 package Primitives;
 
-public class Point2D {//implements Comparable<Point2D> {
+public class Point2D implements Comparable<Point2D> {
     //Fields
     //ok forgot publicly inherited - protected will stay protected in the inherited class as well (c++)
     //but a private field can't be accessed from the son class - so that was use of protected private yet public for inheritance
@@ -30,4 +30,18 @@ public class Point2D {//implements Comparable<Point2D> {
     public void setY(Coordinate _y) { y = new Coordinate(y);	}
 
     // ***************** Administration  ******************** //
+    @Override
+    public int compareTo(Point2D p2D) {
+        if (this.x.compareTo(p2D.x) == 0 &&//why equal to 0??
+                this.y.compareTo(p2D.y) == 0)
+            return 0;//what does this mean??
+        return 1;//like what does it mean to return a 1?
+    }
+    // ***************** Operations ******************** //
+    //ok don't need add or subtract just to string
+    @Override
+    public String toString(){
+        return "("+ x.getCoordinate()//does matter if I use getCoordinate() or toString() (besides that this is a string and other a double?
+        + "," + y.getCoordinate() + ")";
+    }
 }
