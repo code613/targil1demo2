@@ -28,7 +28,7 @@ public class Coordinate implements Comparable<Coordinate>{//indeed how did we kn
 
     // ***************** Operations ******************** //
 
-    // i don't know were this came from why you need it and what it means exactly
+    //when doing changes of coordinates of a point use the following functions
     public void add (Coordinate c ){
         coordinate += c.coordinate;
     }

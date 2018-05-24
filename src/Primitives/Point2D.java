@@ -32,10 +32,10 @@ public class Point2D implements Comparable<Point2D> {
     // ***************** Administration  ******************** //
     @Override
     public int compareTo(Point2D p2D) {
-        if (this.x.compareTo(p2D.x) == 0 &&//why equal to 0??
-                this.y.compareTo(p2D.y) == 0)
-            return 0;//what does this mean??
-        return 1;//like what does it mean to return a 1?
+        //check only if  equal (0) or not equal (1)
+        if (this.x.compareTo(p2D.x) == 0 && this.y.compareTo(p2D.y) == 0)
+            return 0; //both coordinates area equal
+        return 1; // not equal
     }
     // ***************** Operations ******************** //
     //ok don't need add or subtract just to string

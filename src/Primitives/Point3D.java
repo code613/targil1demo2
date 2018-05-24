@@ -1,6 +1,7 @@
 package Primitives;
 
-public class Point3D extends Point2D  {//why doesn't need "implements Comparable<Point3D>" ??????
+//why doesn't need "implements Comparable<Point3D>" ??????
+public class Point3D extends Point2D  {
     //feilds
     private Coordinate z;
 
@@ -16,6 +17,18 @@ public class Point3D extends Point2D  {//why doesn't need "implements Comparable
         // this.z = z;
         this.z = new Coordinate(z);//maybe this really is extra? and Coordinate in constructor is enugh?
     }
+    public Point3D(double x, double y, double z){
+        super(new Coordinate(x), new Coordinate(y));
+        this.z = new Coordinate(z);
+    }
+
+
+    public int compareTo(Point3D p3D) {
+        if (z.compareTo(p3D.z) != 0) {
+            return 1;
+        }
+        return (((Point2D) this).compareTo(((Point2D) p3D)));
+    }
 
     public Point3D(Point2D point2D, Coordinate z) {
 
@@ -24,5 +37,15 @@ public class Point3D extends Point2D  {//why doesn't need "implements Comparable
     }
 
 
+    public void add(Vector v) {
+        x=new Coordinate(x.getCoordinate()+v.get_head().x.getCoordinate());
+        y=new Coordinate(y.getCoordinate()+v.get_head().y.getCoordinate());
+        z=new Coordinate(z.getCoordinate()+v.get_head().z.getCoordinate());
+    }
 
+    @Override
+    public String toString() {
+        String result = super.toString();
+        return result.substring(0,result.length()-1) + "," +z.getCoordinate() +")";
+    }
 }
