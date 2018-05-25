@@ -20,7 +20,10 @@ class CoordinateTest {
     }
 }
 
-//ok below i will put my standers commnets to start off a new class
+//also now understand when a file is red it means it wasn't committed
+//ok great feel getting a hang of this
+//now need to take a shower
+//ok below i will put my standers comments to start off a new class
 
 
 

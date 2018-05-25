@@ -11,7 +11,7 @@ public class Sphere extends RadialGeometry {
 
     //********************Fields*****************//
     private Point3D _center;
-    
+
 // ***************** Constructors ********************** //
 
     public Sphere(double _radius, Point3D _center) {
