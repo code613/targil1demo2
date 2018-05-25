@@ -1,7 +1,12 @@
 package Primitives;
+//ben marcus 305568867
+//class summery
+//this is a 2 dimentional point using 2 coordinates to do such
+//it has cunstructres compareTo as well as a ToString
 
 public class Point2D implements Comparable<Point2D> {
-    //Fields
+
+    //********************Fields*****************//
     //ok forgot publicly inherited - protected will stay protected in the inherited class as well (c++)
     //but a private field can't be accessed from the son class - so that was use of protected private yet public for inheritance
     protected Coordinate x;
@@ -29,7 +34,7 @@ public class Point2D implements Comparable<Point2D> {
     public void setX(Coordinate _x) { x = new Coordinate(x);	}
     public void setY(Coordinate _y) { y = new Coordinate(y);	}
 
-    // ***************** Administration  ******************** //
+    // ***************** Implementations   ******************** //
     @Override
     public int compareTo(Point2D p2D) {
         //check only if  equal (0) or not equal (1)
