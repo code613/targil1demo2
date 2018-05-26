@@ -5,7 +5,7 @@ package Primitives;
 //it has constructor's compareTo as well as a ToString and addition of 2 3D points
 
 //why doesn't need "implements Comparable<Point3D>" ??????
-public class Point3D extends Point2D  {
+public class Point3D extends Point2D{// implements Comparable<Point3D> no doesn't need it because got it from Point2D (I think)
 
 
     //********************fields*****************//
@@ -56,10 +56,29 @@ public class Point3D extends Point2D  {
 
     // ***************** Operations ******************** //
 
+
+    public void add(Point3D v) {
+        x=new Coordinate(x.getCoordinate()+v.x.getCoordinate());
+        y=new Coordinate(y.getCoordinate()+v.y.getCoordinate());
+        z=new Coordinate(z.getCoordinate()+v.z.getCoordinate());
+    }
+
+    public void subtract(Point3D v) {
+        x=new Coordinate(x.getCoordinate()-v.x.getCoordinate());
+        y=new Coordinate(y.getCoordinate()-v.y.getCoordinate());
+        z=new Coordinate(z.getCoordinate()-v.z.getCoordinate());
+    }
+    //here did mines a vecter abouve did mines a 3DPoint
     public void add(Vector v) {
         x=new Coordinate(x.getCoordinate()+v.get_head().x.getCoordinate());
         y=new Coordinate(y.getCoordinate()+v.get_head().y.getCoordinate());
         z=new Coordinate(z.getCoordinate()+v.get_head().z.getCoordinate());
+    }
+
+    public void subtract(Vector v) {//this Coordinate mines the Vector V
+        x=new Coordinate(x.getCoordinate()-v.get_head().x.getCoordinate());
+        y=new Coordinate(y.getCoordinate()-v.get_head().y.getCoordinate());
+        z=new Coordinate(z.getCoordinate()-v.get_head().z.getCoordinate());
     }
 
     @Override
