@@ -5,6 +5,10 @@ import Primitives.Point3D;
 //ben marcus 305568867
 //summery of this class
 //general explanation of the class.. what is it's perpes
+
+//ok here is an implementation in our 3D world created by the 3D point
+
+
 //what the class practically contains
 public class Plane {
 

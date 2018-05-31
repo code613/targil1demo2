@@ -4,6 +4,9 @@ package Primitives;
 //this is a 3 dimensional point inheriting from 2D point as well as using another Coordinate
 //it has constructor's compareTo as well as a ToString and addition of 2 3D points
 
+//in theory here i built my 3D world
+//as now i have created a 0,0,0 point or rather its possibility
+
 //why doesn't need "implements Comparable<Point3D>" ??????
 public class Point3D extends Point2D{// implements Comparable<Point3D> no doesn't need it because got it from Point2D (I think)
 

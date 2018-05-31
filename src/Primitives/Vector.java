@@ -20,6 +20,12 @@ public class Vector implements Comparable<Vector> {
     public Vector(Vector _head) {                         //from a Vector
         this._head = _head.get_head();
     }
+    public Vector(int v,int v1,int v2) {
+        _head = new Point3D(v,v1,v2);
+    }
+    public Vector(double v, double v1, double v2) {
+        _head = new Point3D(v,v1,v2);
+    }
 
     // ***************** Getters/Setters ********************** //
     public void set_head(Point3D _head) {
@@ -68,8 +74,14 @@ public class Vector implements Comparable<Vector> {
                 this.get_head().getZ().getCoordinate()*v.get_head().getZ().getCoordinate();
     }
 
-    public void normalize(){}
-    //public double length(){}
+    public void normalize(){//if i recall correctly what we want here is that all coordinates add up to one
+        double whole = this._head.x.getCoordinate()+this.get_head().y.getCoordinate()+this.get_head().getZ().getCoordinate();
+        this.get_head().setX(new Coordinate(this._head.x.getCoordinate()/whole));
+        this.get_head().setY(new Coordinate(this.get_head().y.getCoordinate()/whole));
+        this.get_head().setZ(new Coordinate(this.get_head().getZ().getCoordinate()/whole));
+    }
+    //public double length(){}//oh i think need to find length from (0,0,0)
+    //length of the vector
 
 
 }
