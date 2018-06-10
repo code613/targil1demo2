@@ -92,7 +92,7 @@ public class Camera {
                           screenDistance, double
                           screenWidth, double
                           screenHeight){
-        
+        return new Ray(new Vector (1,1,1));//place holder so no errors
     }
     }
 

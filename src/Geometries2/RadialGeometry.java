@@ -5,12 +5,17 @@ package Geometries2;
 //general explanation of the class.. what is it's perpes
 //what the class practically contains
 
-public class RadialGeometry {
+import Primitives.Point3D;
+import Primitives.Vector;
+
+public abstract class RadialGeometry implements Geometry{
 
     //********************Fields*****************//
-    private double _radius;
+    protected double _radius;
 
 
+    @Override
+    public abstract Vector getNormal(Point3D p);
 
 
 // ***************** Constructors ********************** //

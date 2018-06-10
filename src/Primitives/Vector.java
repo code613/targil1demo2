@@ -27,7 +27,15 @@ public class Vector implements Comparable<Vector> {
         _head = new Point3D(v,v1,v2);
     }
 
+    public Vector(Point3D center, Point3D p) {
+        _head.setX(new Coordinate( p.getX().getCoordinate()-center.getX().getCoordinate()));
+        _head.setY(new Coordinate( p.getY().getCoordinate()-center.getY().getCoordinate()));
+        _head.setZ(new Coordinate( p.getZ().getCoordinate()-center.getZ().getCoordinate()));
+        //vector AB is B mines A
+    }
+
     // ***************** Getters/Setters ********************** //
+
     public void set_head(Point3D _head) {
         this._head = _head;
     }
@@ -80,8 +88,19 @@ public class Vector implements Comparable<Vector> {
         this.get_head().setY(new Coordinate(this.get_head().y.getCoordinate()/whole));
         this.get_head().setZ(new Coordinate(this.get_head().getZ().getCoordinate()/whole));
     }
-    //public double length(){}//oh i think need to find length from (0,0,0)
-    //length of the vector
+    public double length(){
+        double x = this.get_head().getX().getCoordinate();
+        double y = this.get_head().getY().getCoordinate();
+        double z = this.get_head().getZ().getCoordinate();
 
+        return Math.sqrt(Math.pow(x, 2) +
+                Math.pow(y, 2) +
+                Math.pow(z, 2));}//oh i think need to find length from (0,0,0)
+    //length of the vector
+    public void scale (double v){
+        this.get_head().setX(new Coordinate(this._head.getX().getCoordinate()*v));
+        this.get_head().setY(new Coordinate(this.get_head().getY().getCoordinate()*v));
+        this.get_head().setZ(new Coordinate(this.get_head().getZ().getCoordinate()*v));
+    }
 
 }

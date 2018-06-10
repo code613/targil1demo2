@@ -12,7 +12,11 @@ public class Ray implements Comparable<Ray> {
     private Vector _direction;
     // ***************** Constructors ********************** //
 
-    public Ray(Vector _direction,Point3D _PointOfOrigin) {      //gets a direction and a orgin of type vector and 3D point
+    public Ray(Vector _direction) {
+        this._direction = _direction;
+    }
+
+    public Ray(Vector _direction, Point3D _PointOfOrigin) {      //gets a direction and a orgin of type vector and 3D point
         this._direction = _direction;
         this._PointOfOrigin = _PointOfOrigin;
     }
