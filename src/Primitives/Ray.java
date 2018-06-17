@@ -20,6 +20,10 @@ public class Ray implements Comparable<Ray> {
         this._direction = _direction;
         this._PointOfOrigin = _PointOfOrigin;
     }
+    public Ray( Point3D _PointOfOrigin,Vector _direction) {      //same just opposite direction of input
+        this._direction = _direction;
+        this._PointOfOrigin = _PointOfOrigin;
+    }
     // ***************** Getters/Setters ********************** //
     public Point3D get_PointOfOrigin() {
         return _PointOfOrigin;

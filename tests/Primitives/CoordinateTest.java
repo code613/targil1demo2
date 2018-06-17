@@ -29,17 +29,17 @@ class CoordinateTest {
 
 //ben marcus 305568867
 //summery of this class
-//general explanation of the class.. what is it's perpes
+//general explanation of the class.. what is it's perpis
 //what the class practically contains
 
-//********************Fields*****************//
+// ******************* Fields **************************** //
 
-// ***************** Constructors ********************** //
+// ***************** Constructors ************************* //
 
 // ***************** Getters/Setters ********************** //
 
-// ***************** Implementations   ******************** //
+// ***************** Implementations ********************** //
 
-// ***************** Operations ******************** //
+// ***************** Operations *************************** //
 
 //}

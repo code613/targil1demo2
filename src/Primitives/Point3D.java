@@ -56,6 +56,16 @@ public class Point3D extends Point2D{// implements Comparable<Point3D> no doesn'
         }
         return (((Point2D) this).compareTo(((Point2D) p3D)));
     }
+    //i added (in the other project..)
+    public boolean compareTo2(Point3D point3D) {
+
+        if (((Point2D)this).compareTo((Point2D)point3D) == 0) {
+            if (this.z.compareTo(point3D.z) == 0) {
+                return true;
+            }
+        }
+        return false;
+    }
 
     // ***************** Operations ******************** //
 
@@ -82,6 +92,11 @@ public class Point3D extends Point2D{// implements Comparable<Point3D> no doesn'
         x=new Coordinate(x.getCoordinate()-v.get_head().x.getCoordinate());
         y=new Coordinate(y.getCoordinate()-v.get_head().y.getCoordinate());
         z=new Coordinate(z.getCoordinate()-v.get_head().z.getCoordinate());
+    }
+    public double distance(Point3D point){
+        return Math.sqrt(Math.pow(getX().getCoordinate() - point.getX().getCoordinate(), 2) +
+                Math.pow(getY().getCoordinate() - point.getY().getCoordinate(), 2) +
+                Math.pow(getZ().getCoordinate() - point.getZ().getCoordinate(), 2));
     }
 
     @Override

@@ -74,6 +74,6 @@ public class Triangle extends planev2 {
 
 // ***************** Implementations   ******************** //
 
-// ***************** Operations *****************
+// ***************** Operations *************************** //
 
 }

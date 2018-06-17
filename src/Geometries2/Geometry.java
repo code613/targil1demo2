@@ -14,6 +14,7 @@ public interface Geometry {
     private Color _emmission = new Color(0, 0, 0);*/
 
     public abstract List<Point3D> FindIntersections (Ray ray);
+    //i am not "closed" exactly how the intersection thing works and what it does..
     public abstract Vector getNormal(Point3D point);
 
    /* public double   getShininess() { return _nShininess; }

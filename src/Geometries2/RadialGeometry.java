@@ -20,11 +20,12 @@ public abstract class RadialGeometry implements Geometry{
 
 // ***************** Constructors ********************** //
 
-    //intresting in order to inherit (maybe just when building it..) need defoult constructer..
+    //intresting in order to inherit (maybe just when building it..) need default constructor..
     public RadialGeometry(double _radius) {
         this._radius = _radius;
     }
 
+    public RadialGeometry()              { this._radius = 0.0;    } // needed for Sphere class one of the constructor's..
 // ***************** Getters/Setters ********************** //
 
     public double get_radius() {
